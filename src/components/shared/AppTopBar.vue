@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="#EF5350" hide-on-scroll app>
+  <v-app-bar color="#ff4a57" hide-on-scroll app>
     <v-toolbar-title>
       <h3>
         <strong> E-Páscoa </strong>
