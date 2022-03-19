@@ -1,15 +1,15 @@
 <template>
   <div>
-    <v-container id="grid" v-for="product in data" :key="product.id">
+    <v-container id="grid" v-for="loja in data" :key="loja.id">
       <v-card id="card">
         <v-container id="container-img">
-          <img :src="product.imagem" :alt="product.nome" />
+          <v-icon>mdi-store</v-icon>
         </v-container>
         <v-container id="details">
-          <span>{{ product.nome }} </span>
-          <br />
-          <br />
-          <span>R$ {{ product.preco }}</span>
+          <span>{{ loja.nome }} </span>
+          <span>{{ loja.endereco }}</span
+          ><br />
+          <span>R$ {{ loja.cep }}</span>
         </v-container>
       </v-card>
     </v-container>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "ProductsCard",
+  name: "LojasCard",
   data: () => ({
     isDark: true,
   }),
