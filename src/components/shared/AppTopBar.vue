@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="indigo" hide-on-scroll app>
+  <v-app-bar color="#EF5350" hide-on-scroll app>
     <v-toolbar-title>
       <h3>
         <strong> E-Páscoa </strong>
@@ -28,7 +28,7 @@ export default {
       value: 0,
     };
   },
-  
+
   methods: {
     darkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;

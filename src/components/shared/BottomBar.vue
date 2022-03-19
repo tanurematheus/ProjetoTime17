@@ -1,8 +1,8 @@
 <template>
   <div class="mt-10">
     <v-bottom-navigation
-      background-color="indigo"
-      active-class="blue--text text--lighten-1"
+      background-color="#EF5350"
+      active-class="red--text text--darken-2"
       app
       :value="value"
     >
