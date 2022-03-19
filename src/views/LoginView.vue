@@ -25,8 +25,8 @@
      ></v-text-field>
 
       <v-container id="buttons">
-        <v-btn class="mr-4" @click="submit"> login </v-btn>
-        <v-btn class="mr-4" @click="clear"> limpar </v-btn>
+        <v-btn  @click="submit"> login </v-btn>
+        <v-btn  @click="clear"> limpar </v-btn>
         <v-btn id="btn-cadastro">
           <a href="#/cadastro">cadastro</a>
         </v-btn>
@@ -87,7 +87,10 @@ export default {
 <style scoped>
 
 #buttons {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
 }
 
 #btn-cadastro a {
