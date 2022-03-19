@@ -7,6 +7,7 @@ import CadastroView from '../views/CadastroView'
 import LoginView from '../views/LoginView'
 import LojasView from '../views/LojasView'
 import LojaView from '../views/LojaView'
+import ProductView from "../views/ProductView"
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,11 @@ const routes = [
     path: '/loja',
     name: 'LojaView',
     component: LojaView
+  },
+  {
+    path: '/produto/:id',
+    name: 'ProductView',
+    component: ProductView
   },
 ]
 
