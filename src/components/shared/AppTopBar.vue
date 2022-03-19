@@ -35,6 +35,7 @@ export default {
       value: 0,
     };
   },
+  
   methods: {
     darkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
