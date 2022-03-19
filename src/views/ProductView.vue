@@ -32,7 +32,6 @@ export default {
       "https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json"
     );
     const json = await response.json();
-    console.log(json);
     this.product = json.filter(({ id }) => id == this.$route.params.id)[0];
   },
 };
