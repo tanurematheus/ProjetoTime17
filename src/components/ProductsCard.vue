@@ -2,14 +2,15 @@
   <div>
     <v-container id="grid" v-for="product in data" :key="product.id">
       <v-card id="card">
-        <div class="container-img">
+        <v-container id="container-img">
           <img :src="product.imagem" :alt="product.nome" />
-        </div>
-        <div class="details">
+        </v-container>
+        <v-container id="details">
           <span>{{ product.nome }} </span>
-          <span>{{ product.sabor }}</span>
+          <span>{{ product.sabor }}</span
+          ><br />
           <span>R$ {{ product.preco }}</span>
-        </div>
+        </v-container>
       </v-card>
     </v-container>
   </div>
@@ -25,9 +26,6 @@ export default {
     data: {
       type: Array,
     },
-  },
-  created() {
-    this.isDark = this.$vuetify.theme.isDark;
   },
 };
 </script>
@@ -48,50 +46,9 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 0.5rem;
-  box-shadow: rgb(17 21 23) 0px 0px 5px 1px;
 }
 
-.card .container-img {
-  padding: 1rem;
-}
-
-.card .container-img img {
+#container-img img {
   border-radius: 0.5rem;
 }
-
-.card .details {
-  flex-direction: column !important;
-  padding: 0.5rem;
-}
-
-.card .details span {
-  font-family: inherit;
-  word-break: break-all;
-  font-size: 0.9rem;
-}
-
-/* .card {
-  color: #fff;
-  background: rgb(33, 33, 33);
-  border-radius: .5rem;
-  box-shadow: rgb(17 21 23) 0px 0px 5px 1px;
-}
-
-.card .container-img {
-  padding: 1rem;
-}
-
-.card .container-img img {
-  border-radius: .5rem;
-}
-
-.card .details {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.card .details span {
-  font-size: 1.2rem;
-} */
 </style>
