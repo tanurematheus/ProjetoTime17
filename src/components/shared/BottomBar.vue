@@ -1,8 +1,8 @@
 <template>
   <div class="mt-10">
     <v-bottom-navigation
-      background-color="indigo"
-      active-class="blue--text text--lighten-1"
+      background-color="#EF5350"
+      active-class="red--text text--darken-2"
       app
       :value="value"
     >
@@ -31,7 +31,9 @@
       </router-link>
 
       <router-link class="text-decoration-none" to="/login">
-        <v-btn class="mt-2">
+        <v-btn 
+        class="mt-2"
+        >
           <span>Login</span>
 
           <v-icon>mdi-login</v-icon>
