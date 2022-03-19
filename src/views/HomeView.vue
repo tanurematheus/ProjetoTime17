@@ -1,13 +1,18 @@
 <template>
   <v-container>
-    <h1 class="text-center">Pagina Inicial</h1>
+    <div class = "mt-7 home-img">
+      <img src="../assets/Home-img.png" alt="Home">
+    </div>
+    <p class="text-home">
+       A pandemia veio, e com ela, várias famílias tiveram que criar ideias para diversificar na hora de compor e recuperar a renda, sendo uma delas a venda de Ovos de Páscoa Caseiros. <br>
+       Pensando nisso, realizamos a criação do E-Páscoa, um site que ajudam pessoas que querem realizar compra de Ovos de Páscoa caseiros com vendedores, auxiliando compradores a economizarem na compra de Ovos de Páscoa e auxiliando as famílias que necessitam recuperar a sua renda.
+    </p>
     <ProductsCard :data="products" />
   </v-container>
 </template>
 
 <script>
 import ProductsCard from "../components/ProductsCard.vue";
-
 export default {
   name: "HomeView",
   components: {
@@ -23,3 +28,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.home-img {
+    display: flex;
+    justify-content: center;
+    height:50vw;
+  }
+
+.text-home {
+    font-size: 13px;
+    padding: 12px;
+  }
+</style>
