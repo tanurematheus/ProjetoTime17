@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <router-link to="/loja">
     <v-container id="grid" v-for="loja in data" :key="loja.id">
       <v-card id="card">
         <v-container id="container">
@@ -13,7 +13,7 @@
         </v-container>
       </v-card>
     </v-container>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -35,5 +35,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+a {
+  text-decoration: none;
 }
 </style>
