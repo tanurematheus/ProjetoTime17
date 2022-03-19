@@ -2,11 +2,10 @@
   <div class="mt-10">
     <v-bottom-navigation
       background-color="indigo"
-      active-class="green--text text--lighten-2"
+      active-class="blue--text text--lighten-1"
       app
       :value="value"
-      color="grey"
-      dark
+      
     >
       <router-link class="text-decoration-none" to="/">
         <v-btn retain-focus-on-click class="mt-2">
