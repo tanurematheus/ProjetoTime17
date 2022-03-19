@@ -1,19 +1,21 @@
 <template>
-  <router-link to="/loja">
+  <div>
     <v-container id="grid" v-for="loja in data" :key="loja.id">
-      <v-card id="card">
-        <v-container id="container">
-          <v-icon class="mr-3">mdi-store</v-icon>
-          <span class="text-h5">{{ loja.nome }} </span>
-        </v-container>
-        <v-container id="details">
-          <span>{{ loja.endereco }}</span
-          ><br />
-          <span>{{ loja.cep }}</span>
-        </v-container>
-      </v-card>
+      <router-link id="link" :to="'/loja/' + loja.nome">
+        <v-card id="card">
+          <v-container id="container">
+            <v-icon class="mr-3">mdi-store</v-icon>
+            <span class="text-h5">{{ loja.nome }} </span>
+          </v-container>
+          <v-container id="details">
+            <span>{{ loja.endereco }}</span
+            ><br />
+            <span>{{ loja.cep }}</span>
+          </v-container>
+        </v-card>
+      </router-link>
     </v-container>
-  </router-link>
+  </div>
 </template>
 
 <script>

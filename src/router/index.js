@@ -38,7 +38,7 @@ const routes = [
     component: LojasView
   },
   {
-    path: '/loja',
+    path: '/loja/:id',
     name: 'LojaView',
     component: LojaView
   },
