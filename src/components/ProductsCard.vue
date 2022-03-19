@@ -7,8 +7,6 @@
         </v-container>
         <v-container id="details">
           <span>{{ product.nome }} </span>
-          <span>{{ product.sabor }}</span
-          ><br />
           <span>R$ {{ product.preco }}</span>
         </v-container>
       </v-card>
@@ -18,7 +16,7 @@
 
 <script>
 export default {
-  name: "ProfuctsCad",
+  name: "ProductsCard",
   data: () => ({
     isDark: true,
   }),
@@ -38,8 +36,6 @@ img {
 #grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
 }
 
 #card {
@@ -49,6 +45,14 @@ img {
 }
 
 #container-img img {
+  object-fit: cover;
   border-radius: 0.5rem;
+  height: 100%;
+}
+
+#details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>

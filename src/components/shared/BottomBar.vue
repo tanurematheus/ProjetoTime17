@@ -5,7 +5,6 @@
       active-class="blue--text text--lighten-1"
       app
       :value="value"
-      
     >
       <router-link class="text-decoration-none" to="/">
         <v-btn retain-focus-on-click class="mt-2">
