@@ -30,8 +30,11 @@
     >
       login
     </v-btn>
-    <v-btn @click="clear">
+    <v-btn class="mr-4" @click="clear">
       limpar
+    </v-btn>
+    <v-btn id="btn-cadastro">
+      <a href="#/cadastro">cadastro</a>
     </v-btn>
   </form>
     
@@ -83,5 +86,8 @@
 </script>
 
 <style scoped>
-
+#btn-cadastro a {
+  text-decoration: none;
+  color: #fff;
+}
 </style>
