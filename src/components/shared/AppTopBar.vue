@@ -8,14 +8,7 @@
 
     <v-spacer />
 
-    <v-btn
-      v-on="on"
-      v-bind="attrs"
-      color="transparent"
-      small
-      fab
-      @click="darkMode"
-    >
+    <v-btn color="transparent" small fab @click="darkMode">
       <div v-if="!$vuetify.theme.dark">
         <v-icon>mdi-egg</v-icon>
       </div>
@@ -35,6 +28,7 @@ export default {
       value: 0,
     };
   },
+  
   methods: {
     darkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;

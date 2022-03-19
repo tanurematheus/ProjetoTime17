@@ -5,8 +5,7 @@
       active-class="green--text text--lighten-2"
       app
       :value="value"
-      color="grey"
-      dark
+      
     >
       <router-link class="text-decoration-none" to="/">
         <v-btn retain-focus-on-click class="mt-2">
@@ -32,7 +31,7 @@
         </v-btn>
       </router-link>
 
-      <router-link class="text-decoration-none" to="/sobre">
+      <router-link class="text-decoration-none" to="/login">
         <v-btn class="mt-2">
           <span>Login</span>
 
