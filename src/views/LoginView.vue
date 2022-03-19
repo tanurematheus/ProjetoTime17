@@ -14,12 +14,12 @@
 
     <v-text-field
             v-model="password"
+            :error-messages="passwordErrors"
             :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
             :rules="[rules.required, rules.min]"
             :type="show1 ? 'text' : 'password'"
             name="input-10-1"
             label="Senha"
-            hint="At least 8 characters"
             counter
             @click:append="show1 = !show1"
      ></v-text-field>
@@ -48,6 +48,7 @@
 
     validations: {
       email: { required, email },
+      password: { required }
     },
 
     data () {
@@ -56,9 +57,8 @@
         show1: false,
         password: '',
         rules: {
-          required: value => !!value || 'Required.',
-          min: v => v.length >= 8 || 'Min 8 characters',
-          emailMatch: () => (`The email and password you entered don't match`),
+          required: value => !!value || 'Preencha a senha',
+          min: v => v.length >= 8 || 'Min 8 caracteres'
         },
       }
     },
@@ -66,10 +66,16 @@
       emailErrors () {
         const errors = []
         if (!this.$v.email.$dirty) return errors
-        !this.$v.email.email && errors.push('Must be valid e-mail')
-        !this.$v.email.required && errors.push('E-mail is required')
+        !this.$v.email.email && errors.push('Informe e-mail válido')
+        !this.$v.email.required && errors.push('Preencha o e-mail')
         return errors
       },
+      passwordErrors () {
+        const errors = []
+        if (!this.$v.password.$dirty) return errors
+        !this.$v.password.required && errors.push('Preencha a senha')
+        return errors
+      }
     },
 
     methods: {
