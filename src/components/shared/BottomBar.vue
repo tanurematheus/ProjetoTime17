@@ -32,7 +32,7 @@
       </router-link>
 
       <router-link class="text-decoration-none" to="/login">
-        <v-btn  class="mt-2">
+        <v-btn class="mt-2">
           <span>Login</span>
 
           <v-icon>mdi-login</v-icon>
