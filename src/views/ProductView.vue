@@ -1,13 +1,14 @@
 <template>
   <div>
     <v-container id="grid">
-      <h1 id="title" >{{ product.nome }}</h1>
+      <h1 id="title">{{ product.nome }}</h1>
       <v-container id="container-img">
         <img :src="product.imagem" :alt="product.nome" />
       </v-container>
       <div id="details">
         <v-container>
-          <h2>{{ product.nome }} {{ product.sabor }}</h2><br>
+          <h2>{{ product.nome }} {{ product.sabor }}</h2>
+          <br />
           <h1>R$ {{ product.preco }}</h1>
         </v-container>
         <v-container>
@@ -16,14 +17,19 @@
           {{ product.local.endereco }}
           {{ product.local.cep }}
         </v-container>
+        <ProductForm />
       </div>
     </v-container>
   </div>
 </template>
 
 <script>
+import ProductForm from "../components/ProductForm.vue";
 export default {
   name: "ProductView",
+  components: {
+    ProductForm,
+  },
   data: () => ({
     product: {},
   }),
@@ -51,5 +57,4 @@ export default {
   width: 100%;
   border-radius: 0.5rem;
 }
-
 </style>
