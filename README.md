@@ -1,6 +1,5 @@
 # <p align='center'> **E-Páscoa**
 
-- [<p align='center'> **E-Páscoa**](#p-aligncenter-e-páscoa)
   - [**1. Sobre o Projeto**](#1-sobre-o-projeto)
   - [**2. Desafio do Projeto**](#2-desafio-do-projeto)
   - [**3. Tecnologias Utilizadas**](#3-tecnologias-utilizadas)
